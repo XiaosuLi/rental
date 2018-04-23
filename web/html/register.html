@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+
+
+<form action="http://localhost:8080/user/register" method="post">
+    用户姓名:<br>
+    <input type="text" name="userName">
+    <br>
+
+    用户密码:<br>
+    <input type="password" name="userPassword">
+    <br>
+    用户手机号:<br>
+    <input type="text" name="userPhone">
+    <br>
+    验证码:<br>
+    <input type="text" name="testCode">
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+    <br>
+    <br>
+</form>
+
+<form action="http://localhost:8080/user/dologin" method="post">
+    用户手机号:<br>
+    <input type="text" name="userPhone">
+    <br>
+    用户密码:<br>
+    <input type="password" name="userPassword">
+    <br>
+    <input type="submit" value="登录" id="register">
+    <br>
+    <br>
+</form>
+
+<form action="http://localhost:8080/test/chinese" method="post">
+    中文测试:<br>
+    <input type="text" name="name">
+    <br>
+    <input type="submit" value="登录">
+    <br>
+    <br>
+</form>
+
+
+
+</body>
+
+
+
+</html>

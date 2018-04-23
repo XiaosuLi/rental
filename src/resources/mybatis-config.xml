@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 几个重要的配置、数据库连接池、事务交给spring管理 -->
+    <!--配置全局属性-->
+    <settings>
+        <!--使用jdbc的getGeneratekeys获取自增主键值，-->
+        <!--1、这个好像跟主键的自增实现有关，写了数据库就实现自增了？  -->
+      <!--<setting name="useGeneratedKeys" value="true"/>-->
+        <!--使用列别名替换列名　　默认值为true
+        select name as title(实体中的属性名是title) form table;
+         -->
+                     
+       <!-- 2、开启后mybatis会自动帮我们把表中name的值赋到对应实体的title属性中 -->
+        <setting name="useColumnLabel" value="true"/>
+
+        <!--开启驼峰命名转换Table:create_time到 Entity(createTime)-->
+        <!--3、在数据库中默认命名规范是 单词_单词，而实体类中的是驼峰，下面的配置mybatis实现自动转换  -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+        
+</configuration>
